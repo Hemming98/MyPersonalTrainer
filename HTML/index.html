@@ -13,17 +13,37 @@
 <body>
 
 <div class="loginBox2">
-    <form>
+    <br>
         <h1>Login to MyPersonalTrainer</h1>
         <p>Brugernavn eller email</p>
 
-        <input type="text" id="username">
+        <input type="text" id="username" placeholder="Email or username">
 
         <p>Adgangskode</p>
 
-        <input type="text" id="password"> <br>
-    </br>
-        <button type= "button" onclick="getInfo()"> Log ind</button> <br>
+        <input type="password" value="" id="password" placeholder="Enter password here">
+        <br>
+        </br>
+        <!-- Add button to toggle visibility -->
+        <input type= "checkbox" onclick="myPassword1()" >Show password
+
+        <!-- Adding some JavaScript for Password visibility -->
+        <script>
+            function myPassword1() {
+                var x = document.getElementById("password");
+                if (x.type === "password") {
+                    x.type = "text" ;
+                } else
+                    x.type = "password";
+            };
+        </script>
+
+        </br>
+        </br>
+
+
+        <button type= "button" onclick="getInfo()"> Log ind</button>
+        <br>
         <br>
 
         </br>

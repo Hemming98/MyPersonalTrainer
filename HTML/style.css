@@ -27,4 +27,14 @@ body {
     width: 350px;
 }
 
+ul1 {
+    list-style-type: none;
+    margin: 0;
+    padding: 0
+}
+
+li a {
+    display: block;
+    background-color: goldenrod;
+}
 
