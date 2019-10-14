@@ -21,7 +21,7 @@
 
         <p>Adgangskode</p>
 
-        <input type="password" value="" id="passwordTest1" placeholder="Enter password here">
+        <input type="password" value="" id="password" placeholder="Enter password here">
         <br>
         </br>
         <!-- Add button to toggle visibility -->
@@ -30,13 +30,14 @@
         <!-- Adding some JavaScript for Password visibility -->
         <script>
             function myPassword1() {
-                var x = document.getElementById("passwordTest1");
+                var x = document.getElementById("password");
                 if (x.type === "password") {
                     x.type = "text" ;
                 } else
                     x.type = "password";
-            }
+            };
         </script>
+
         </br>
         </br>
 
