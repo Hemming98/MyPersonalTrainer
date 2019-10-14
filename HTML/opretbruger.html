@@ -3,27 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <title> Opret bruger</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
 </head>
+
 <body>
-<p> E-mail</p>
-<input type="text"> <br>
 
-<p> Adgangskode</p>
-<input type="text"> <br>
+    <div class="loginBox">
+        <h1>Opret dig her!</h1>
+<p1> E-mail</p1>
+    </br>
+    <input type="text" placeholder="example@example.com"> <br>
+    <br>
+    </br>
 
-<p> Alder</p>
-<input type="text"> <br>
 
-<p> Træner/ Klient</p>
-<input type="text"> <br>
 
-<p> Mobilnummer </p>
-<input type="text"> <br>
+        <!-- Toggle Password Visibility (Kristoffer) -->
+<p1> Adgangskode</p1>
+    </br>
+        <input type="password" value="" id="myInput" placeholder="Enter password here"> <br>
+        </br>
+        <!-- Add button to toggle visibility -->
+        <input type= "checkbox" onclick="myPassword()" >Show password
 
-<p> Fitnesscenter</p>
-<input type="text"> <br>
+        <!-- Adding some JavaScript for Password visibility -->
+            <script>
+                function myPassword() {
+                    var x = document.getElementById("myInput");
+                    if (x.type === "password") {
+                        x.type = "text" ;
+                    } else
+                        x.type = "password";
+                }
+            </script>
+    </br>
+
+        <p1>Alder</p1>
+    </br>
+<input type="text" placeholder="Age fx 28"> <br>
+        <br>
+        </br>
+        <p1> Træner/ Klient</p1>
+    </br>
+        <!-- Vi laver et "dropdown field" -->
+        <select type="text" id="trainerOrClient">
+            <option selected disabled>-Choose Trainer & Client-</option>
+            <option value="Trainer">Trainer</option>
+            <option value="Client">Client</option>
+        </select>
+        <br>
+        </br>
+        <p1> Mobilnummer </p1>
+    </br>
+
+<input type="text" placeholder="fx 20-xx-xx-xx"><br>
+        <br>
+        </br>
+        <!-- Vi laver et "dropdown field" -->
+        <p1> Fitnesscenter</p1>
+        </br>
+            <select type="text" id="fitnessCenter">
+                <option selected disabled>-Choose Center-</option>
+                <option value="urban1">Urban Gym Vesterport</option>
+                <option value="urban2">Urban Gym Nørrebro</option>
+                <option value="repeat1">REPEAT</option>
+                <option value="vesterBronx1">Vesterbronx Gym</option>
+            </select>
+        <br/>
+        <br/>
+
 
 <button onclick="">Opret</button>
+
+    </div>
+
+
+
+
 </body>
 
 </html>
