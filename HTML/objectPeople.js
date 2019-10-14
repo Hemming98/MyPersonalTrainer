@@ -18,10 +18,12 @@ function getInfo() {
     var password = document.getElementById("password").value;
 
 // Vi laver nu et for loop, som looper igennem passwords og usernames i vores array, hvorefter den alerter om password og username er korrekt.
+// Yderemere har vil tilføjet window.location for at henvise brugeren til en ny side, hvis oplysningerne er korrekte.
 
     for(i = 0; 1 < objPeople.length; i++){
         if(username == objPeople[i].username && password == objPeople[i].password) {
-            alert(username + " is logged in")
+            alert(username + " is logged in");
+            window.location="oversigt.html";
             return
         } else {
             alert("Incorrect username or password");
