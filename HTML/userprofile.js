@@ -15,9 +15,8 @@ class userProfile {
 
 var userOne = new userProfile("Oliver", "oliverdc@live.dk", "kagemand123",
     "male",19,"21225007","Fitness World Søborg");
-console.log(userOne);
+console.log(userOne)
 
-}
 
 function getInfo() {
     var name = document.getElementById("name").value;
@@ -28,7 +27,5 @@ function getInfo() {
     var fitnesscenter = document.getElementById("fitnesscenter").value;
 
     for(i = 0; 1 < objUsers.length; i++){
-        if(username == objUsers)
-
-            }
+        if(username == objUsers) {}}
 }
