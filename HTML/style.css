@@ -32,7 +32,7 @@ ul1 {
     overflow: hidden;
     margin: 0;
     padding: 0;
-    background-color: #333333;
+    background-color: #333;
 }
 
 li {
@@ -44,6 +44,14 @@ li a {
     color: white;
     text-align: center;
     padding: 10px 16px;
+    text-decoration: none;
+}
+li a:hover:not (.active) {
+    background-color: burlywood;
+}
+
+.active {
+    background-color: seagreen;
 }
 
 
