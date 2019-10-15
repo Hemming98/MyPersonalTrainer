@@ -10,8 +10,11 @@ class bookingconfirmation {
     }
 }
 //Vi har ikke taget højde for om nogle af variablerne er f.eks. strings.
+
 var userOne = new bookingconfirmation("09/10/2019", "14:00",
     "Fitness World", "Lars", "Ingrid", "Cardio");
+
+
 
 console.log(userOne);
 

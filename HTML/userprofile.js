@@ -16,5 +16,16 @@ class userProfile {
 var userOne = new userProfile("Oliver", "oliverdc@live.dk", "kagemand123",
     "male",19,"21225007","Fitness World Søborg");
 
+var userTwo = new userProfile("Kristoffer", "kristoffer@live.dk", "softice123",
+    "male", "21", "34352346", "Urban Gym");
+
+var userTree = new userProfile("Sara", "sara@live.dk", "dans123", "female","26",
+    "67686970", "Repeat");
+
 console.log(userOne);
+
+console.log(userTwo);
+
+console.log(userTree);
+
 
