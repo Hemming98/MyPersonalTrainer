@@ -10,73 +10,115 @@
 
 <body>
 
-    <div class="loginBox">
-        <h1>Opret dig her!</h1>
-<p1> E-mail</p1>
+<div class="loginBox">
+    <h1>Opret dig her!</h1>
+
+    <p1> E-mail</p1>
     </br>
+
+    <input id= "newMail" type="text" placeholder="example@example.com"> <br>
+    <br>
+
     <input type="text" placeholder="example@example.com"> <br>
-    </br>
-        <p1>Username</p1>
-        </br>
-        <input type="text" placeholder="example123"> <br>
-        </br>
-        <!-- Toggle Password Visibility (Kristoffer) -->
-<p1> Adgangskode</p1>
-    </br>
-        <input type="password" value="" id="myInput" placeholder="Enter password here"> <br>
-        </br>
-        <!-- Add button to toggle visibility -->
-        <input type= "checkbox" onclick="myPassword()" >Show password
 
-        <!-- Adding some JavaScript for Password visibility -->
-            <script>
-                function myPassword() {
-                    var x = document.getElementById("myInput");
-                    if (x.type === "password") {
-                        x.type = "text" ;
-                    } else
-                        x.type = "password";
-                }
-            </script>
+</br>
+    <p1>Username</p1>
     </br>
+    <input type="text" placeholder="example123"> <br>
+</br>
+    <!-- Toggle Password Visibility (Kristoffer) -->
+    <p1> Adgangskode</p1>
+    </br>
+    <input type="password" value="" id="newPassword" placeholder="Enter password here"> <br>
+</br>
+    <!-- Add button to toggle visibility -->
+    <input type= "checkbox" onclick="myPassword()" >Show password
 
-        <p1>Alder</p1>
-    </br>
-<input type="text" placeholder="Age fx 28"> <br>
-        </br>
-        <p1> Træner/ Klient</p1>
-    </br>
-        <!-- Vi laver et "dropdown field" -->
-        <select type="text" id="trainerOrClient">
-            <option selected disabled>-Choose Trainer & Client-</option>
-            <option value="Trainer">Trainer</option>
-            <option value="Client">Client</option>
-        </select>
-        <br>
-        </br>
-        <p1> Mobilnummer </p1>
+    <!-- Adding some JavaScript for Password visibility -->
+    <script>
+        function myPassword() {
+            var x = document.getElementById("newPassword");
+            if (x.type === "password") {
+                x.type = "text" ;
+            } else
+                x.type = "password";
+        }
+    </script>
     </br>
 
-<input type="text" placeholder="fx 20-xx-xx-xx"><br>
-        </br>
-        <!-- Vi laver et "dropdown field" -->
-        <p1> Fitnesscenter</p1>
-        </br>
-            <select type="text" id="fitnessCenter">
-                <option selected disabled>-Choose Center-</option>
-                <option value="urban1">Urban Gym Vesterport</option>
-                <option value="urban2">Urban Gym Nørrebro</option>
-                <option value="repeat1">REPEAT</option>
-                <option value="vesterBronx1">Vesterbronx Gym</option>
-            </select>
-        <br/>
-        <br/>
+    <p1>Alder</p1>
+    </br>
+
+    <input id= "newAge"  type="text" placeholder="Age fx 28"> <br>
+    <br>
+
+    <input type="text" placeholder="Age fx 28"> <br>
+
+</br>
+    <p1> Træner/ Klient</p1>
+    </br>
+
+    <!-- Vi laver et "dropdown field" -->
+    <select type="text" id="trainerOrClient">
+        <option selected disabled>-Choose Trainer & Client-</option>
+        <option value="Trainer">Trainer</option>
+        <option value="Client">Client</option>
+    </select>
+    <br>
+    </br>
+    <p1> Mobilnummer </p1>
+    </br>
 
 
-<button onclick="">Opret</button>
+    <input id = "NewPhoneNumber" type="text" placeholder="fx 20-xx-xx-xx"><br>
+    <br>
 
-    </div>
+    <input type="text" placeholder="fx 20-xx-xx-xx"><br>
 
+</br>
+    <!-- Vi laver et "dropdown field" -->
+    <p1> Fitnesscenter</p1>
+    </br>
+    <select type="text" id="fitnessCenter">
+        <option selected disabled>-Choose Center-</option>
+        <option value="urban1">Urban Gym Vesterport</option>
+        <option value="urban2">Urban Gym Nørrebro</option>
+        <option value="repeat1">REPEAT</option>
+        <option value="vesterBronx1">Vesterbronx Gym</option>
+    </select>
+    <br/>
+    <br/>
+
+
+    <button id= "button" onclick="">Opret</button>
+
+</div>
+
+<script>
+    this.newMail = document.getElementById("NewMail").value;
+    this.newUser = document.getElementById("newUser").value;
+    this.newPassword = document.getElementById("newPassword").value;
+
+    this.newAge = document.getElementById("NewAge").value;
+    this.trainerOrClient = document.getElementById("trainerOrClient").value;
+    this.fitnessCenter = document.getElementById("fitnessCenter").value;
+    this.button = document.getElementById("button").value;
+
+    button.onclick = function(){
+
+        localStorage.setItem("Email", newMail);
+        localStorage.setItem("Email", newUser);
+        localStorage.setItem("Email", newPassword);
+        localStorage.setItem("Email", newAge);
+        localStorage.setItem("Email", trainerOrClient);
+        localStorage.setItem("Email", fitnessCenter);
+        alert("new user has been created")
+
+
+    };
+
+
+</script>
 
 
 </body>
