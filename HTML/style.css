@@ -29,12 +29,21 @@ body {
 
 ul1 {
     list-style-type: none;
+    overflow: hidden;
     margin: 0;
-    padding: 0
+    padding: 0;
+    background-color: #333333;
+}
+
+li {
+    float: left;
 }
 
 li a {
     display: block;
-    background-color: goldenrod;
+    color: white;
+    text-align: center;
+    padding: 10px 16px;
 }
+
 
