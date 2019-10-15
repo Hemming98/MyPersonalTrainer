@@ -29,7 +29,7 @@ userList.push( new userProfile("Sara", "sara@live.dk", "sara", "sara123","26",
 
 //Vi laver en console.log for at tjekke at vi kan hente værdier i vores array.
 
-console.log(userList[0].age);
+console.log(userList);
 console.log(userList[1].gender);
 console.log(userList[2].fitnesscenter);
 
