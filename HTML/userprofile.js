@@ -16,6 +16,12 @@ class userProfile {
 
 // Vi anvender derefter push funktionen til at få skubbet vores objekter op i vore tomme array.
 
+var curentLogIn = [];
+
+if(localStorage.getItem("user") == null)
+{
+
+
 var userList = [];
 
 
@@ -28,12 +34,23 @@ userList.push( new userProfile("Kristoffer", "kristoffer@live.dk", "kristoffer",
 userList.push( new userProfile("Sara", "sara@live.dk", "sara", "sara123","26",
     "67686970", "Repeat","Repeat"));
 
+    var userListString = JSON.stringify(userList);
+    localStorage.setItem("user", userListString)
+
+    console.log(localStorage);
+    console.log('Nu har vi gemt vores trænere');
+
+    }else{
+
+    var loggedInID = localStorage.getItem('id');
+    var userList = JSON.parse(localStorage.getItem("user"));
+    var currentUser = userList[loggedInID];
+    console.log(currentUser);
+
+}
+
 //Vi laver en console.log for at tjekke at vi kan hente værdier i vores array.
 
-console.log(userList);
-console.log(userList[1].gender);
-console.log(userList[2].fitnesscenter);
-console.log(userProfile);
 
 //Funktionen her henter id igennem html-siden.
 
@@ -48,6 +65,11 @@ function getInfo() {
         if(username == userList[i].username && password == userList[i].password) {
             alert(username + " is logged in");
             window.location="oversigt.html";
+            curentLogIn.push({username: username});
+            document.location.href = "oversigt.html";
+            var IDString = JSON.stringify(curentLogIn);
+            localStorage.setItem('id', i);
+            localStorage.setItem("current user", IDString);
             return
         }
     }alert("Incorrect username or password");
