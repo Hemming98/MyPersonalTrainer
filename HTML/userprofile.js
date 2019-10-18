@@ -13,6 +13,7 @@ class userProfile {
     }
 }
 //Her laver vi nu en tom array, som vi kalder "Userlist", hvorfter vi laver 3 nye user profiless.
+
 // Vi anvender derefter push funktionen til at få skubbet vores objekter op i vore tomme array.
 
 var userList = [];
@@ -32,6 +33,7 @@ userList.push( new userProfile("Sara", "sara@live.dk", "sara", "sara123","26",
 console.log(userList);
 console.log(userList[1].gender);
 console.log(userList[2].fitnesscenter);
+console.log(userProfile);
 
 //Funktionen her henter id igennem html-siden.
 
