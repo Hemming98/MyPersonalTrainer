@@ -92,6 +92,7 @@
 </div>
 
 <script>
+
     this.newMail = document.getElementById("NewMail").value;
     this.newUser = document.getElementById("newUser").value;
     this.newPassword = document.getElementById("newPassword").value;
@@ -99,6 +100,7 @@
     this.newAge = document.getElementById("NewAge").value;
     this.trainerOrClient = document.getElementById("trainerOrClient").value;
     this.fitnessCenter = document.getElementById("fitnessCenter").value;
+
 
 
     function createUser (){
@@ -119,6 +121,14 @@
         
     }
 
+
+        localStorage.setItem("Email", newMail);
+        localStorage.setItem("Email", newUser);
+        localStorage.setItem("Email", newPassword);
+        localStorage.setItem("Email", newAge);
+        localStorage.setItem("Email", trainerOrClient);
+        localStorage.setItem("Email", fitnessCenter);
+        alert("new user has been created");
 
 
 
