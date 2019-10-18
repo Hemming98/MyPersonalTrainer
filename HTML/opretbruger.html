@@ -19,12 +19,10 @@
     <input id= "newMail" type="text" placeholder="example@example.com"> <br>
     <br>
 
-    <input type="text" placeholder="example@example.com"> <br>
-
 </br>
     <p1>Username</p1>
     </br>
-    <input type="text" placeholder="example123"> <br>
+    <input type="text" id= "newUser" placeholder="example123"> <br>
 </br>
     <!-- Toggle Password Visibility (Kristoffer) -->
     <p1> Adgangskode</p1>
@@ -52,7 +50,6 @@
     <input id= "newAge"  type="text" placeholder="Age fx 28"> <br>
     <br>
 
-    <input type="text" placeholder="Age fx 28"> <br>
 
 </br>
     <p1> Træner/ Klient</p1>
@@ -70,13 +67,12 @@
     </br>
 
 
-    <input id = "NewPhoneNumber" type="text" placeholder="fx 20-xx-xx-xx"><br>
+    <input id = "newPhoneNumber" type="text" placeholder="fx 20-xx-xx-xx"><br>
     <br>
 
-    <input type="text" placeholder="fx 20-xx-xx-xx"><br>
 
 </br>
-    <!-- Vi laver et "dropdown field" -->
+    <!-- Vi laver et "dropdown ffield" -->
     <p1> Fitnesscenter</p1>
     </br>
     <select type="text" id="fitnessCenter">
@@ -89,23 +85,42 @@
     <br/>
     <br/>
 
-    
 
-    <button id= "button" onclick="">Opret</button>
+    <button id= "button" onclick="createUser()">Opret bruger</button>
+    <button id= "" onclick="deleteUser()">Slet bruger</button>
 
 </div>
 
 <script>
+
     this.newMail = document.getElementById("NewMail").value;
     this.newUser = document.getElementById("newUser").value;
     this.newPassword = document.getElementById("newPassword").value;
-
+    this.newPhoneNumber = document.getElementById("newPhoneNumber").value;
     this.newAge = document.getElementById("NewAge").value;
     this.trainerOrClient = document.getElementById("trainerOrClient").value;
     this.fitnessCenter = document.getElementById("fitnessCenter").value;
-    this.button = document.getElementById("button").value;
 
-    button.onclick = function(){
+
+
+    function createUser (){
+
+        localStorage.setItem("Email", newMail.value);
+        localStorage.setItem("Username", newUser.value);
+        localStorage.setItem("Password", newPassword.value);
+        localStorage.setItem("Age", newAge.value);
+        localStorage.setItem("Trainer", trainerOrClient.value);
+        localStorage.setItem("Fitness Center ", fitnessCenter.value);
+        localStorage.setItem("Phone Number ", newPhoneNumber.value);
+        alert("new user has been created!");
+    }
+    
+    function deleteUser() {
+        localStorage.clear();
+        alert("User has been deleted!");
+        
+    }
+
 
         localStorage.setItem("Email", newMail);
         localStorage.setItem("Email", newUser);
@@ -113,10 +128,10 @@
         localStorage.setItem("Email", newAge);
         localStorage.setItem("Email", trainerOrClient);
         localStorage.setItem("Email", fitnessCenter);
-        alert("new user has been created")
+        alert("new user has been created");
 
 
-    };
+
 
 
 </script>
