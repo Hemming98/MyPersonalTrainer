@@ -50,6 +50,7 @@ li a {
 h2 {
     color: black;
 }
+
 li a:hover:not (.active) {
     background-color: burlywood;
 }
@@ -58,8 +59,6 @@ li a:hover:not (.active) {
     background-color: seagreen;
 }
 
-table1 {
-    color: black;
-}
+
 
 
