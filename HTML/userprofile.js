@@ -49,5 +49,4 @@ function getInfo() {
             return
         }
     }alert("Incorrect username or password");
-
 }

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home_Booking</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <style>
+        div {
+            background-color: antiquewhite;
+            width: 400px;
+            border: 10px solid green;
+            padding: 100px;
+            margin: 100px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<!-- Navbar importet from other oversigt.html -->
+
+<ul1>
+    <li><a href="profile.html">Profile</a></li>
+    <li><a href="Home_Booking.html">Home/Booking</a></li>
+    <li><a>News</a></li>
+    <li><a>Contact</a></li>
+    <li style="float:right"><a class="active" href="#about">About<a/><li/>
+</ul1>
+
+<div>
+    <h2>Book et træningsmodul</h2>
+
+    <table border="1" id="chocolateTable">
+        <tr id="ch1">
+            <td>Cardio-træning</td>
+            <td>$34.99</td>
+            <td><input type="button" value="Add" onclick="addItem(document.getElementById('ch1').rowIndex)"/></td>
+        </tr>
+        <tr id="ch2">
+
+            <td> <select type="text" id="fitnessCenter">Bentræning
+                <option selected disabled>-Choose Center-</option>
+                <option value="urban1">Urban Gym Vesterport</option>
+                <option value="urban2">Urban Gym Nørrebro</option>
+                <option value="repeat1">REPEAT</option>
+                <option value="vesterBronx1">Vesterbronx Gym</option>
+            </select></td><td>$14.99</td>
+
+            <td><input type="button" value="Add" onclick="addItem(document.getElementById('ch2').rowIndex)"/></td>
+        </tr>
+
+    </table>
+
+    <h2>Your Shopping Cart</h2>
+    <table id="shoppingCart" border="1">
+        <tr>
+            <td>Your shopping cart is empty</td>
+        </tr>
+    </table>
+    <p id="total"><strong>Sales Total</strong>: $0.00</p>
+
+
+
+</div>
+
+<script>
+
+</script>
+
+
+</body>
+</html>

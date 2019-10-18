@@ -46,12 +46,20 @@ li a {
     padding: 10px 16px;
     text-decoration: none;
 }
+
+h2 {
+    color: black;
+}
 li a:hover:not (.active) {
     background-color: burlywood;
 }
 
 .active {
     background-color: seagreen;
+}
+
+table1 {
+    color: black;
 }
 
 
