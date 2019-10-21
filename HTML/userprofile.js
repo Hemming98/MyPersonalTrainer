@@ -39,7 +39,7 @@ userList.push( new userProfile("Sara", "sara@live.dk", "sara", "sara123","26",
 
 // Vi anvendder nu JSON.stringify - Dette betyder at vores userlist som er et array bliver lavet om til forskellige strings.
     var userListString = JSON.stringify(userList);
-    localStorage.setItem("user", userListString)
+    localStorage.setItem("user", userListString);
 
     console.log(localStorage);
     console.log('Nu har vi gemt vores trænere');
