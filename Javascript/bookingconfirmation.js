@@ -24,3 +24,7 @@ bookinglist.push( new bookingconfirmation("09/12/2019", "16:00",
     "Urban Gym", "Oliver", "Sara", "Cardio"));
 
 console.log(bookinglist)
+
+
+
+
