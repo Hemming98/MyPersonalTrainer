@@ -78,7 +78,7 @@
 
     <!-- Confirm my training -->
     </br>
-    <button>Let's workout</button>
+    <button onclick="getValueFromList()">Let's workout</button>
 
 </div>
 
@@ -87,9 +87,10 @@
     //Function which alert the selected value from the "Dropdown list".
 
     function getValueFromList() {
-
-        var getValue = document.getElementById("trainingType").selectedOptions[0].value;
-
+        var training_time = document.getElementById("trainingType").selectedOptions[0].value;
+        var timeForTraining = document.getElementById("timeDateMonth").selectedOptions[0].value;
+        var trainingTime1 = document.getElementById("personalTrainerOfTheDay").selectedOptions[0].value;
+        console.log(training_time + ", " + timeForTraining + ", " + trainingTime1);
     }
 
 </script>
