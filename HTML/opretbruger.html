@@ -85,13 +85,15 @@
     <br/>
     <br/>
 
-
+// her har vi henholdsvis en knap som sletter / opretter vores brugere ved at kalde funktionerne deletUser og createUser
     <button id= "button" onclick="createUser()">Opret bruger</button>
     <button id= "" onclick="deleteUser()">Slet bruger</button>
 
 </div>
 
 <script>
+
+// Her henter vi vores brugerdata ved at kalde værdien i vores idmtags
 
     this.newMail = document.getElementById("NewMail").value;
     this.newUser = document.getElementById("newUser").value;
@@ -101,7 +103,7 @@
     this.trainerOrClient = document.getElementById("trainerOrClient").value;
     this.fitnessCenter = document.getElementById("fitnessCenter").value;
 
-
+// vi har lavet en function som gemmer ovenstående værdier i localstorage og  laver en alert når dette er gjort.
 
     function createUser (){
 
@@ -115,6 +117,8 @@
         alert("new user has been created!");
         console.log(localStorage);
     }
+
+    // her har vi lavet en funktion som ved hjælp af localstorage. clear sletter vores brugerdata fra localstorage.
     
     function deleteUser() {
         localStorage.clear();

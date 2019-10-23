@@ -34,4 +34,21 @@ function getInfo() {
 
 console.log(userList);
 
+
+  localStorage.setItem("login_status", "true");
+
+  var userList = [];
+
+
+userList.push( new userProfile("Oliver", "oliverdc@live.dk", "oliver",
+    "oliver123","male","19","21225007","Fitness World Søborg"));
+
+userList.push( new userProfile("Kristoffer", "kristoffer@live.dk", "kristoffer",
+    "kristoffer123", "male", "21", "123456789", "Urban Gym"));
+
+userList.push( new userProfile("Sara", "sara@live.dk", "sara", "sara123","26",
+    "67686970", "Repeat","Repeat"));
+
+//Vi laver en console.log for at tjekke at vi kan hente værdier i vores array.
+
  */
