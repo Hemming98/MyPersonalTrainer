@@ -16,7 +16,7 @@ class userProfile {
 
 // Her laver vi en empty array, som skal bruges til at opbevare local storage i.
 
-var curentLogIn = [];
+var currentLogIn = [];
 
 if(localStorage.getItem("user") == null)
 
@@ -34,15 +34,12 @@ userList.push( new userProfile("Oliver", "oliverdc@live.dk", "oliver",
 userList.push( new userProfile("Kristoffer", "kristoffer@live.dk", "kristoffer",
     "kristoffer123", "male", "21", "123456789", "Urban Gym"));
 
-userList.push( new userProfile("Sara", "sara@live.dk", "sara", "sara123","26",
-    "67686970", "Repeat","Repeat"));
+userList.push( new userProfile("Sara", "sara@live.dk", "sara", "sara123","female",
+    "26", "21222324","Repeat"));
 
 // Vi anvendder nu JSON.stringify - Dette betyder at vores userlist som er et array bliver lavet om til forskellige strings.
     var userListString = JSON.stringify(userList);
     localStorage.setItem("user", userListString);
-
-    console.log(localStorage);
-    console.log('Nu har vi gemt vores trænere');
 
     }else{
 
@@ -55,6 +52,9 @@ userList.push( new userProfile("Sara", "sara@live.dk", "sara", "sara123","26",
     // Her consolelogger vi localstorage så vi kan se oplysningerne på den bruger som er logget ind.
 
     console.log(currentUser);
+    console.log(currentLogIn);
+    console.log(localStorage);
+
 
 }
 
@@ -69,16 +69,27 @@ function getInfo() {
 // Yderemere har vil tilføjet window.location for at henvise brugeren til en ny side, hvis oplysningerne er korrekte.
     // Vi anvender nu JSON for at lave vores currentLogIn array om til en enkelt string, som så er vores enkelte bruger som er logget ind.
 
-    for(i = 0; i < userList.length; i++) {
-        if(username == userList[i].username && password == userList[i].password) {
+    for (i = 0; i < userList.length; i++) {
+        if (username == userList[i].username && password == userList[i].password) {
             alert(username + " is logged in");
-            window.location="oversigt.html";
-            curentLogIn.push({username: username});
+            window.location = "oversigt.html";
+            currentLogIn.push({username: username});
             document.location.href = "oversigt.html";
-            var IDString = JSON.stringify(curentLogIn);
+            var IDString = JSON.stringify(currentLogIn);
             localStorage.setItem('id', i);
             localStorage.setItem("current user", IDString);
             return
         }
-    }alert("Incorrect username or password");
+    }
+    alert("Incorrect username or password");
+
 }
+
+ /*Logut funktion for at slette Current users værdier fra local storage.
+ var logout = document.getElementById("logout");
+ logout.onclick = function logout(){
+  = null;
+ localStorage.setItem("userList", JSON.stringify(userList));
+ window.location="index.html";
+ }
+ */
