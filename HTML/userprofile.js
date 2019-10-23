@@ -92,4 +92,8 @@ function getInfo() {
  localStorage.setItem("userList", JSON.stringify(userList));
  window.location="index.html";
  }
+
+ Placeholder og ID
+ Kalder current user og den værdi vi ønsker.
+ 
  */
