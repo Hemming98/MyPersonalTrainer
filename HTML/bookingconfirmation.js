@@ -1,4 +1,4 @@
-class bookingconfirmation {
+/*class bookingconfirmation {
     constructor(date, time, fitnessCenter, client, trainer, trainingType)   {
 
         this.date = date;
@@ -23,7 +23,18 @@ bookinglist.push( new bookingconfirmation("34/10/2019", "17:00",
 bookinglist.push( new bookingconfirmation("09/12/2019", "16:00",
     "Urban Gym", "Oliver", "Sara", "Cardio"));
 
-console.log(bookinglist)
+console.log(bookinglist)*/
+
+//Function which alert the selected value from the "Dropdown list".
+
+function getValueFromList() {
+    var trainingType = document.getElementById("trainingType").selectedOptions[0].text;
+    var dateForTheWorkout = document.getElementById("timeDateMonth").selectedOptions[0].text;
+    var timeOfTheWorkout = document.getElementById("timeForTraining").selectedOptions[0].text;
+    var trainingTime1 = document.getElementById("personalTrainerOfTheDay").selectedOptions[0].text;
+
+    alert("Hello" + " " + currentUser.name + " " + trainingType + ", " + dateForTheWorkout + "," + timeOfTheWorkout +", " + trainingTime1);
+}
 
 
 
