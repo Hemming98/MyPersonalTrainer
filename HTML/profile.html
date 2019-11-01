@@ -37,7 +37,26 @@
 
 
 
-<p> </p>
+    <br>
+    <br>
+    <br>
+    <input type="text" id="myProfileID" placeholder="Name">
+
+    <script>
+
+        function myProfile() {
+            window.onload=myProfile();
+            alert(" Alert inside Profile function ");
+
+
+
+            document.getElementById("myProfileID").innerHTML ="Name" + currentUser.name;
+        }
+
+    </script>
+
+
+
 
 
 
