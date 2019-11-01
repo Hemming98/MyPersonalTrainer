@@ -7,14 +7,23 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 
     <style>
-        div {
+
+        #box {
             background-color: antiquewhite;
             width: 400px;
             border: 10px solid green;
             padding: 100px;
             margin: 100px;
         }
+
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+
     </style>
+
+
 
 </head>
 
@@ -30,7 +39,7 @@
     <li style="float:right"><a class="active" href="about.html">About<a/><li/>
 </ul1>
 
-<div>
+<div id="box">
     <!-- Dropdown bar for trainingmodule -->
 
     <h2>Book et træningsmodul</h2>
@@ -82,9 +91,30 @@
 
 </div>
 
+<h3>Find dit lokale træningcenter på kortet</h3>
+<div id="map"></div>
+
+<script>
+
+    function initMap() {
+        //The location of the Gym
+        var urbanVester = {lat: 55.678040, lng: 12.562337};
+        var map = new google.maps.Map(
+        document.getElementById("map"), {zoom: 4, center: urbanVester});
+        //Here we add the market that points out where the gym is
+        var marker = new google.maps.Marker({position: urbanVester, map: map});
+    }
+
+</script>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTxc8Odu3gZUnjg8TFWgib-1bZZVYz-X0&callback=initMap"></script>
+
 <script src="bookingconfirmation.js"></script>
 
 <script src="userprofile.js"></script>
 
 </body>
 </html>
+
+
+

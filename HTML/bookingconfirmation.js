@@ -25,7 +25,7 @@ bookinglist.push( new bookingconfirmation("09/12/2019", "16:00",
 
 console.log(bookinglist)*/
 
-//Function which alert the selected value from the "Dropdown list".
+//Function which alert the selected value from the "Dropdown list" and combines it with some relavant data from the userProfile?
 
 function getValueFromList() {
     var trainingType = document.getElementById("trainingType").selectedOptions[0].text;
@@ -35,6 +35,7 @@ function getValueFromList() {
 
     alert("Hello" + " " + currentUser.name + " " + trainingType + ", " + dateForTheWorkout + "," + timeOfTheWorkout +", " + trainingTime1);
 }
+
 
 
 
