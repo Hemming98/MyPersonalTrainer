@@ -78,7 +78,7 @@ function getInfo() {
             document.location.href = "oversigt.html";
             var IDString = JSON.stringify(currentLogIn);
             localStorage.setItem('id', i);
-            localStorage.setItem("current user", IDString);
+            localStorage.setItem("CurrentUser", IDString);
             return
         }
     }
@@ -88,10 +88,10 @@ function getInfo() {
 
 //window.onload = function (Profile) {
 
-    document.getElementById("myProfile").innerHTML ="Name" + currentUser.name
+   // document.getElementById("myProfile").innerHTML ="Name" + currentUser.name
 
-}
-*// 
+//}
+
 
 
 
@@ -110,4 +110,15 @@ function getInfo() {
  Placeholder og ID
  Kalder current user og den værdi vi ønsker.
   <button onclick="Profile">Show profile</button>
+
+
+     function myProfile() {
+            window.onload=myProfile();
+            alert(" Alert inside Profile function ");
+
+
+
+            document.getElementById("myProfileID").innerHTML ="Name" + currentUser.name;
+        }
+
  */
