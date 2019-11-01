@@ -86,6 +86,19 @@ function getInfo() {
 
 }
 
+// Window.onload som loader vores personlige oplysninger på vores subsite.
+
+window.onload = function myProfile() {
+    document.getElementById("myProfileName").innerHTML = "Name: " + currentUser.name;
+    document.getElementById("myProfileUsername").innerHTML = "Username: " + currentUser.username;
+    document.getElementById("myProfileMail").innerHTML = "E-Mail: " + currentUser.mail;
+    document.getElementById("myProfilePassword").innerHTML = "Password: " + currentUser.password;
+    document.getElementById("myProfileGender").innerHTML = "Gender: " + currentUser.gender;
+    document.getElementById("myProfileAge").innerHTML = "Age: " + currentUser.age;
+    document.getElementById("myProfileMobilenumber").innerHTML = "Mobile Number: " + currentUser.mobilenumber;
+    document.getElementById("myProfileFitnesscenter").innerHTML = "Fitness Center: " + currentUser.fitnesscenter;
+
+}
 //window.onload = function (Profile) {
 
    // document.getElementById("myProfile").innerHTML ="Name" + currentUser.name
