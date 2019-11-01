@@ -54,6 +54,7 @@ userList.push( new userProfile("Sara", "sara@live.dk", "sara", "sara123","female
     console.log(currentUser);
     console.log(currentLogIn);
     console.log(localStorage);
+    console.log(currentUser.name);
 
 
 }
@@ -85,6 +86,19 @@ function getInfo() {
 
 }
 
+//window.onload = function (Profile) {
+
+    document.getElementById("myProfile").innerHTML ="Name" + currentUser.name
+
+}
+*// 
+
+
+
+
+
+
+
  /*Logut funktion for at slette Current users værdier fra local storage.
  var logout = document.getElementById("logout");
  logout.onclick = function logout(){
@@ -95,5 +109,5 @@ function getInfo() {
 
  Placeholder og ID
  Kalder current user og den værdi vi ønsker.
- 
+  <button onclick="Profile">Show profile</button>
  */
