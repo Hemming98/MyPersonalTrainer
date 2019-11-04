@@ -91,7 +91,8 @@ function getInfo() {
     document.getElementById("myProfile").innerHTML ="Name" + currentUser.name
 
 }
-*// 
+
+
 
 
 
