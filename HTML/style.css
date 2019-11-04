@@ -1,5 +1,6 @@
 body {
-    background-color: lightblue;
+    background-color: mintcream;
+    background-image: url("https://www.google.com/search?q=fitness+center+&tbm=isch&ved=2ahUKEwjnrveosM_lAhWQNewKHQodAtoQ2-cCegQIABAA&oq=fitness+center+&gs_l=img.3..0j0i30l9.2431.3111..3768...0.0..0.120.298.3j1......0....1..gws-wiz-img.......0i24j0i8i30j0i5i30j0i19j0i8i30i19.TnT-1M8pGng&ei=Knu_XefxIJDrsAeKuojQDQ&bih=821&biw=1440#imgrc=6cjfxwT2_RnO4M");
 
 }
 
@@ -27,37 +28,7 @@ body {
     width: 350px;
 }
 
-ul1 {
-    list-style-type: none;
-    overflow: hidden;
-    margin: 20px;
-    padding: 20px;
-    background-color: gray;
-}
 
-li {
-    float: left;
-}
-
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 10px 16px;
-    text-decoration: none;
-}
-
-h2 {
-    color: black;
-}
-
-li a:hover:not (.active) {
-    background-color: burlywood;
-}
-
-.active {
-    background-color: seagreen;
-}
 
 
 

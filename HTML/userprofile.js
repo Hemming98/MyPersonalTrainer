@@ -33,10 +33,10 @@ userList.push( new userProfile("Oliver", "oliverdc@live.dk", "oliver",
     "oliver123","male","19","21225007","Urban Gym", "None"));
 
 userList.push( new userProfile("Kristoffer", "kristoffer@live.dk", "kristoffer",
-    "kristoffer123", "male", "21", "123456789", "Urban Gym"));
+    "kristoffer123", "male", "21", "123456789", "Urban Gym", "Expert"));
 
 userList.push( new userProfile("Sara", "sara@live.dk", "sara", "sara123","female",
-    "26", "21222324","Repeat"));
+    "26", "21222324","Repeat", "Expert"));
 
 // Vi anvendder nu JSON.stringify - Dette betyder at vores userlist som er et array bliver lavet om til forskellige strings.
     var userListString = JSON.stringify(userList);
