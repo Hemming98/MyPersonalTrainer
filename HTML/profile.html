@@ -54,7 +54,8 @@
 
 
     <script>
-
+// Her anvender vi window.onload som loader vores funktion når subsitet bliver loaded.
+/// Vi anvender derefter document.getElementById til at hente værdierne fra vores ID på htmlsiden, og derefter indsætter værdierne fra vores currentUser.
         window.onload = function myProfile() {
             document.getElementById("myProfileName").innerHTML = "Name: " + currentUser.name;
             document.getElementById("myProfileUsername").innerHTML = "Username: " + currentUser.username;

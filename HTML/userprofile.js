@@ -29,13 +29,13 @@ var userList = [];
 
 // Vi anvender derefter push funktionen til at få skubbet vores objekter op i vore tomme array.
 
-userList.push( new userProfile("Oliver", "oliverdc@live.dk", "oliver",
+userList.push( new userProfile("Oliver Dahl Christiansen", "oliverdc@live.dk", "oliver",
     "oliver123","male","19","21225007","Urban Gym", "None"));
 
-userList.push( new userProfile("Kristoffer", "kristoffer@live.dk", "kristoffer",
+userList.push( new userProfile("Kristoffer Kristensen", "kristoffer@live.dk", "kristoffer",
     "kristoffer123", "male", "21", "123456789", "Urban Gym", "Expert"));
 
-userList.push( new userProfile("Sara", "sara@live.dk", "sara", "sara123","female",
+userList.push( new userProfile("Sara Sharef", "sara@live.dk", "sara", "sara123","female",
     "26", "21222324","Repeat", "Expert"));
 
 // Vi anvendder nu JSON.stringify - Dette betyder at vores userlist som er et array bliver lavet om til forskellige strings.
@@ -89,7 +89,7 @@ function getInfo() {
 
 // Window.onload som loader vores personlige oplysninger på vores subsite.
 
-window.onload = function myProfile() {
+/*window.onload = function myProfile() {
     document.getElementById("myProfileName").innerHTML = "Name: " + currentUser.name;
     document.getElementById("myProfileUsername").innerHTML = "Username: " + currentUser.username;
     document.getElementById("myProfileMail").innerHTML = "E-Mail: " + currentUser.mail;
