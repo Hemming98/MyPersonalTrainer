@@ -7,7 +7,17 @@
     <meta charset="UTF-8">
     <title>Profile</title>
 
+    <link rel="stylesheet" type="text/css" href="nav-bar.css">
     <link rel="stylesheet" type="text/css" href="style.css">
+
+    <ul>
+        <li><a href="oversigt.html">Home</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="Home_Booking.html">Booking</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li style="float:right"><a href="index.html">Logout<a/><li/>
+    </ul>
+
 
 
     <style>
@@ -24,39 +34,42 @@
 
 <body>
 
-<ul1>
-    <li><a href="oversigt.html">Home</a></li>
-    <li><a href="profile.html">Profile</a></li>
-    <li><a href="Home_Booking.html">Booking</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li style="float:right"><a class="active" href="about.html">About<a/><li/>
-</ul1>
+
 <div>
 
 <h1>Personlige oplysninger</h1>
 
 
+    <br>
+    <br>
+    <p id="myProfileName"></p>
+    <p id="myProfileUsername"></p>
+    <p id="myProfileMail"></p>
+    <p id="myProfilePassword"></p>
+    <p id="myProfileGender"></p>
+    <p id="myProfileAge"></p>
+    <p id="myProfileMobilenumber"></p>
+    <p id="myProfileFitnesscenter"></p>
+    <p id="myProfileExperience"></p>
 
-    <br>
-    <br>
-    <br>
-    <input type="text" id="myProfileID" placeholder="Name">
 
     <script>
-
-        function myProfile() {
-            window.onload=myProfile();
-            alert(" Alert inside Profile function ");
-
-
-
-            document.getElementById("myProfileID").innerHTML ="Name" + currentUser.name;
+// Her anvender vi window.onload som loader vores funktion når subsitet bliver loaded.
+/// Vi anvender derefter document.getElementById til at hente værdierne fra vores ID på htmlsiden, og derefter indsætter værdierne fra vores currentUser.
+        window.onload = function myProfile() {
+            document.getElementById("myProfileName").innerHTML = "Name: " + currentUser.name;
+            document.getElementById("myProfileUsername").innerHTML = "Username: " + currentUser.username;
+            document.getElementById("myProfileMail").innerHTML = "E-Mail: " + currentUser.mail;
+            document.getElementById("myProfilePassword").innerHTML = "Password: " + currentUser.password;
+            document.getElementById("myProfileGender").innerHTML = "Gender: " + currentUser.gender;
+            document.getElementById("myProfileAge").innerHTML = "Age: " + currentUser.age;
+            document.getElementById("myProfileMobilenumber").innerHTML = "Mobile Number: " + currentUser.mobilenumber;
+            document.getElementById("myProfileFitnesscenter").innerHTML = "Fitness Center: " + currentUser.fitnesscenter;
+            document.getElementById("myProfileExperience").innerHTML = "Experience: " + currentUser.experience;
         }
 
+
     </script>
-
-
-
 
 
 

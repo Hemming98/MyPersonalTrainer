@@ -1,7 +1,7 @@
 // Vi har udarbejdet en klasse som hedder "userProfile", heri har vi tildeldt nogle forskellige variabler i constructoren.
 
 class userProfile {
-    constructor(name, mail, username, password, gender, age, mobilenumber, fitnesscenter) {
+    constructor(name, mail, username, password, gender, age, mobilenumber, fitnesscenter, experience) {
         this.name = name;
         this.username = username;
         this.mail = mail;
@@ -10,6 +10,7 @@ class userProfile {
         this.age = age;
         this.mobilenumber = mobilenumber;
         this.fitnesscenter = fitnesscenter;
+        this.experience = experience;
     }
 }
 
@@ -28,14 +29,14 @@ var userList = [];
 
 // Vi anvender derefter push funktionen til at få skubbet vores objekter op i vore tomme array.
 
-userList.push( new userProfile("Oliver", "oliverdc@live.dk", "oliver",
-    "oliver123","male","19","21225007","Fitness World Søborg"));
+userList.push( new userProfile("Oliver Dahl Christiansen", "oliverdc@live.dk", "oliver",
+    "oliver123","male","19","21225007","Urban Gym", "None"));
 
-userList.push( new userProfile("Kristoffer", "kristoffer@live.dk", "kristoffer",
-    "kristoffer123", "male", "21", "123456789", "Urban Gym"));
+userList.push( new userProfile("Kristoffer Kristensen", "kristoffer@live.dk", "kristoffer",
+    "kristoffer123", "male", "21", "123456789", "Urban Gym", "Expert"));
 
-userList.push( new userProfile("Sara", "sara@live.dk", "sara", "sara123","female",
-    "26", "21222324","Repeat"));
+userList.push( new userProfile("Sara Sharef", "sara@live.dk", "sara", "sara123","female",
+    "26", "21222324","Repeat", "Expert"));
 
 // Vi anvendder nu JSON.stringify - Dette betyder at vores userlist som er et array bliver lavet om til forskellige strings.
     var userListString = JSON.stringify(userList);
@@ -78,7 +79,7 @@ function getInfo() {
             document.location.href = "oversigt.html";
             var IDString = JSON.stringify(currentLogIn);
             localStorage.setItem('id', i);
-            localStorage.setItem("current user", IDString);
+            localStorage.setItem("CurrentUser", IDString);
             return
         }
     }
@@ -86,12 +87,24 @@ function getInfo() {
 
 }
 
+// Window.onload som loader vores personlige oplysninger på vores subsite.
+
+/*window.onload = function myProfile() {
+    document.getElementById("myProfileName").innerHTML = "Name: " + currentUser.name;
+    document.getElementById("myProfileUsername").innerHTML = "Username: " + currentUser.username;
+    document.getElementById("myProfileMail").innerHTML = "E-Mail: " + currentUser.mail;
+    document.getElementById("myProfilePassword").innerHTML = "Password: " + currentUser.password;
+    document.getElementById("myProfileGender").innerHTML = "Gender: " + currentUser.gender;
+    document.getElementById("myProfileAge").innerHTML = "Age: " + currentUser.age;
+    document.getElementById("myProfileMobilenumber").innerHTML = "Mobile Number: " + currentUser.mobilenumber;
+    document.getElementById("myProfileFitnesscenter").innerHTML = "Fitness Center: " + currentUser.fitnesscenter;
+    document.getElementById("myProfileExperience").innerHTML = "Experience: " + currentUser.experience;
+}
 //window.onload = function (Profile) {
 
-    document.getElementById("myProfile").innerHTML ="Name" + currentUser.name
+   // document.getElementById("myProfile").innerHTML ="Name" + currentUser.name
 
-}
-
+//}
 
 
 
@@ -111,4 +124,15 @@ function getInfo() {
  Placeholder og ID
  Kalder current user og den værdi vi ønsker.
   <button onclick="Profile">Show profile</button>
+
+
+     function myProfile() {
+            window.onload=myProfile();
+            alert(" Alert inside Profile function ");
+
+
+
+            document.getElementById("myProfileID").innerHTML ="Name" + currentUser.name;
+        }
+
  */
