@@ -13,11 +13,10 @@
     <ul>
         <li><a href="oversigt.html">Home</a></li>
         <li><a href="profile.html">Profile</a></li>
-        <li><a href="Home_Booking.html">Booking</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li style="float:right"><a href="index.html">Logout<a/><li/>
+        <li><a href="Booking.html">Booking</a></li>
+        <li><a href="Maps.html">Maps</a></li>
+        <li style="float:right"><a href="Login.html">Logout<a/><li/>
     </ul>
-
 
 
     <style>
@@ -68,10 +67,10 @@
             document.getElementById("myProfileExperience").innerHTML = "Experience: " + currentUser.experience;
 
 
-            document.getElementById("bookingTrainingType").innerHTML = "Training ype: " + localStorage.getItem("trainingType");
+            document.getElementById("bookingTrainingType").innerHTML = "Training type: " + localStorage.getItem("trainingType");
             document.getElementById("bookingDate").innerHTML = "Date: " + localStorage.getItem("date");
             document.getElementById("bookingTime").innerHTML = "Time: " + localStorage.getItem("time");
-            document.getElementById("bookingTrainer").innerHTML = "trainer: " + localStorage.getItem("trainer");
+            document.getElementById("bookingTrainer").innerHTML = "Trainer: " + localStorage.getItem("trainer");
         }
 
 
@@ -94,6 +93,6 @@
 
 </body>
 
-<script src="userprofile.js"></script>
+<script src="Login.js"></script>
 
 </html>

@@ -79,3 +79,21 @@ li {
         localStorage.setItem("Fitness Center ", fitnessCenter.value);
         localStorage.setItem("Phone Number ", newPhoneNumber.value);
 */
+
+
+    <style>
+
+        #box {
+            background-color: antiquewhite;
+            width: 400px;
+            border: 10px solid green;
+            padding: 100px;
+            margin: 100px;
+        }
+
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+
+    </style>

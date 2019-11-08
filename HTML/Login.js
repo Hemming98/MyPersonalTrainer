@@ -1,20 +1,3 @@
-// Vi har udarbejdet en klasse som hedder "userProfile", heri har vi tildeldt nogle forskellige variabler i constructoren.
-// Vi har valgt at lave et sepperart dokumnt til Klassen.
-
-/*class userProfile {
-    constructor(name, mail, username, password, gender, age, mobilenumber, fitnesscenter, experience) {
-        this.name = name;
-        this.username = username;
-        this.mail = mail;
-        this.password = password;
-        this.gender = gender;
-        this.age = age;
-        this.mobilenumber = mobilenumber;
-        this.fitnesscenter = fitnesscenter;
-        this.experience = experience;
-    }
-}*/
-
 
 // Her laver vi en empty array, som skal bruges til at opbevare local storage i.
 // Vi laver også en var userList i global scope, så den kan kaldes flere steder
@@ -89,18 +72,3 @@ function getInfo() {
 
 }
 
-// Window.onload som loader vores personlige oplysninger på vores subsite.
-
-/*window.onload = function myProfile() {
-    document.getElementById("myProfileName").innerHTML = "Name: " + currentUser.name;
-    document.getElementById("myProfileUsername").innerHTML = "Username: " + currentUser.username;
-    document.getElementById("myProfileMail").innerHTML = "E-Mail: " + currentUser.mail;
-    document.getElementById("myProfilePassword").innerHTML = "Password: " + currentUser.password;
-    document.getElementById("myProfileGender").innerHTML = "Gender: " + currentUser.gender;
-    document.getElementById("myProfileAge").innerHTML = "Age: " + currentUser.age;
-    document.getElementById("myProfileMobilenumber").innerHTML = "Mobile Number: " + currentUser.mobilenumber;
-    document.getElementById("myProfileFitnesscenter").innerHTML = "Fitness Center: " + currentUser.fitnesscenter;
-    document.getElementById("myProfileExperience").innerHTML = "Experience: " + currentUser.experience;
-}
-
- */

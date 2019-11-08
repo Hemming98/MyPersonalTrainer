@@ -13,7 +13,7 @@
 
 
 
-// Vi har nu defineret en funktion, som henter værdierne fra vores teksfelter i index.html
+// Vi har nu defineret en funktion, som henter værdierne fra vores teksfelter i Login.html
 
 function getInfo() {
     var username = document.getElementById("username").value;
