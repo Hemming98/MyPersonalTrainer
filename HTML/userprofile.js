@@ -53,9 +53,10 @@ userList.push( new userProfile("Sara Sharef", "sara@live.dk", "sara", "sara123",
     // Her consolelogger vi localstorage så vi kan se oplysningerne på den bruger som er logget ind.
 
     console.log(currentUser);
-    console.log(currentLogIn);
     console.log(localStorage);
-    console.log(currentUser.name);
+
+
+
 
 
 }
@@ -71,11 +72,13 @@ function getInfo() {
 // Yderemere har vil tilføjet window.location for at henvise brugeren til en ny side, hvis oplysningerne er korrekte.
 // Vi anvender nu JSON for at lave vores currentLogIn array om til en enkelt string, som så er vores enkelte bruger som er logget ind.
 
+    // Hvad opnår koden?
+
     for (i = 0; i < userList.length; i++) {
         if (username == userList[i].username && password == userList[i].password) {
             alert(username + " is logged in");
             window.location = "oversigt.html";
-            currentLogIn.push({username: username});
+            currentLogIn.push({currentUser});
             document.location.href = "oversigt.html";
             var IDString = JSON.stringify(currentLogIn);
             localStorage.setItem('id', i);
