@@ -66,6 +66,12 @@
             document.getElementById("myProfileMobilenumber").innerHTML = "Mobile Number: " + currentUser.mobilenumber;
             document.getElementById("myProfileFitnesscenter").innerHTML = "Fitness Center: " + currentUser.fitnesscenter;
             document.getElementById("myProfileExperience").innerHTML = "Experience: " + currentUser.experience;
+
+
+            document.getElementById("bookingTrainingType").innerHTML = "Training ype: " + localStorage.getItem("trainingType");
+            document.getElementById("bookingDate").innerHTML = "Date: " + localStorage.getItem("date");
+            document.getElementById("bookingTime").innerHTML = "Time: " + localStorage.getItem("time");
+            document.getElementById("bookingTrainer").innerHTML = "trainer: " + localStorage.getItem("trainer");
         }
 
 
@@ -74,6 +80,18 @@
 
 
 </div>
+
+<div>
+    <h1>My booking</h1>
+
+    <p id="bookingTrainingType"></p>
+    <p id="bookingDate"></p>
+    <p id="bookingTime"></p>
+    <p id="bookingTrainer"></p>
+
+
+</div>
+
 </body>
 
 <script src="userprofile.js"></script>
