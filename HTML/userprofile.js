@@ -1,6 +1,6 @@
 // Vi har udarbejdet en klasse som hedder "userProfile", heri har vi tildeldt nogle forskellige variabler i constructoren.
 
-class userProfile {
+/*class userProfile {
     constructor(name, mail, username, password, gender, age, mobilenumber, fitnesscenter, experience) {
         this.name = name;
         this.username = username;
@@ -12,53 +12,47 @@ class userProfile {
         this.fitnesscenter = fitnesscenter;
         this.experience = experience;
     }
-}
+}*/
 
 
 // Her laver vi en empty array, som skal bruges til at opbevare local storage i.
 
 var currentLogIn = [];
+var userList
 
-if(localStorage.getItem("user") == null)
-
-{
+if(localStorage.getItem("user") == null) {
 
 //Her laver vi nu en tom array, som vi kalder "Userlist", hvorfter vi laver 3 nye user profiles.
 
-var userList = [];
+    userList = [];
 
 // Vi anvender derefter push funktionen til at få skubbet vores objekter op i vore tomme array.
 
-userList.push( new userProfile("Oliver Dahl Christiansen", "oliverdc@live.dk", "oliver",
-    "oliver123","male","19","21225007","Urban Gym", "None"));
+    userList.push( new userProfile("Oliver Dahl Christiansen", "oliverdc@live.dk", "oliver",
+        "oliver123","male","19","21225007","Urban Gym", "None"));
 
-userList.push( new userProfile("Kristoffer Kristensen", "kristoffer@live.dk", "kristoffer",
-    "kristoffer123", "male", "21", "123456789", "Urban Gym", "Expert"));
+    userList.push( new userProfile("Kristoffer Kristensen", "kristoffer@live.dk", "kristoffer",
+        "kristoffer123", "male", "21", "123456789", "Urban Gym", "Expert"));
 
-userList.push( new userProfile("Sara Sharef", "sara@live.dk", "sara", "sara123","female",
-    "26", "21222324","Repeat", "Expert"));
+    userList.push( new userProfile("Sara Sharef", "sara@live.dk", "sara", "sara123","female",
+        "26", "21222324","Repeat", "Expert"));
 
 // Vi anvendder nu JSON.stringify - Dette betyder at vores userlist som er et array bliver lavet om til forskellige strings.
     var userListString = JSON.stringify(userList);
     localStorage.setItem("user", userListString);
 
-    }else{
+}else{
 
     // Vi laver en variable "loggedInID", hvorefter at vi bruger variablen til at hente vores "id" gemt i vores localStorage.
     // Vi anvdender JSON.parse til at konveterer vores data fra strings til objekter.
     var loggedInID = localStorage.getItem('id');
-    var userList = JSON.parse(localStorage.getItem("user"));
+    userList = JSON.parse(localStorage.getItem("user"));
     var currentUser = userList[loggedInID];
 
     // Her consolelogger vi localstorage så vi kan se oplysningerne på den bruger som er logget ind.
 
     console.log(currentUser);
     console.log(localStorage);
-
-
-
-
-
 }
 
 
