@@ -10,12 +10,14 @@ function getValueFromList() {
     alert("Hello" + " " + currentUser.name + " " + trainingType + ", " + dateForTheWorkout + "," + timeOfTheWorkout +", " + trainingTime1);
 }
 
-
+// vi henter værdierne fra vores id tags som ligger i booking.js - Sara
 
 this.trainingTypeInput = document.getElementById("trainingType");
 this.timeDateMonthInput = document.getElementById("timeDateMonth");
 this.timeForTrainingInput = document.getElementById("timeForTraining");
 this.personalTrainerOfTheDayInput = document.getElementById("personalTrainerOfTheDay");
+
+// vi laver en function som gemmer i localstorage ved hjælp af setItem
 
 function saveBooking() {
 
@@ -28,7 +30,7 @@ function saveBooking() {
 }
 
 
-// sletter booking
+// sletter booking som er gemt i local storage - Sara
 
 function deleteBooking () {
     localStorage.removeItem("trainingType");
