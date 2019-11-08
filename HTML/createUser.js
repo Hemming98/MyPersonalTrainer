@@ -6,7 +6,6 @@ function myPassword() {
         x.type = "password";
 }
 
-//constructor(name, mail, username, password, gender, age, mobilenumber, fitnesscenter, experience)
 
 var newMail = document.getElementById("newMail");
 var newUser = document.getElementById("newUser");
@@ -118,20 +117,21 @@ function createUser() {
 
         // vi har lavet en function som gemmer ovenstående værdier i localstorage og  laver en alert når dette er gjort.
 
-        var userArray = JSON.parse(localStorage.getItem("user"))
+
+
+
+
+
+
+
+
+        // Her laver vi en en ny userArray som vi psuher til vores userlist.
+        // Vi bruger derefter JSON.Stringify fordi alt der er gemt i local storage skal være strings, hvorefter at vores JSON.parse laver den om fra en string.
+
+        var userArray = JSON.parse(localStorage.getItem("user"));
         userArray.push(new userProfile(newName.value, newMail.value, newUser.value, newPassword.value, null, newAge.value, newPhoneNumber.value, fitnessCenter.value, null))
 
-        localStorage.setItem("user", JSON.stringify(userArray))
-        /*
-        localStorage.setItem("Email", newMail.value);
-        localStorage.setItem("Username", newUser.value);
-        localStorage.setItem("Password", newPassword.value);
-        localStorage.setItem("Age", newAge.value);
-        localStorage.setItem("Name", newName.value);
-        localStorage.setItem("Trainer", trainerOrClient.value);
-        localStorage.setItem("Fitness Center ", fitnessCenter.value);
-        localStorage.setItem("Phone Number ", newPhoneNumber.value);
-*/
+        localStorage.setItem("user", JSON.stringify(userArray));
         alert("new user has been created!");
         console.log(localStorage);
 

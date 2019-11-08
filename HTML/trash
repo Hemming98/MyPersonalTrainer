@@ -33,3 +33,49 @@ li {
     border-right: 3px solid;
 }
 
+//window.onload = function (Profile) {
+
+   // document.getElementById("myProfile").innerHTML ="Name" + currentUser.name
+
+//}
+
+
+
+ /*Logut funktion for at slette Current users værdier fra local storage.
+ var logout = document.getElementById("logout");
+ logout.onclick = function logout(){
+  = null;
+ localStorage.setItem("userList", JSON.stringify(userList));
+ window.location="index.html";
+ }
+
+ Placeholder og ID
+ Kalder current user og den værdi vi ønsker.
+  <button onclick="Profile">Show profile</button>
+
+
+     function myProfile() {
+            window.onload=myProfile();
+            alert(" Alert inside Profile function ");
+
+
+
+            document.getElementById("myProfileID").innerHTML ="Name" + currentUser.name;
+        }
+
+
+
+
+
+
+
+      /*
+        localStorage.setItem("Email", newMail.value);
+        localStorage.setItem("Username", newUser.value);
+        localStorage.setItem("Password", newPassword.value);
+        localStorage.setItem("Age", newAge.value);
+        localStorage.setItem("Name", newName.value);
+        localStorage.setItem("Trainer", trainerOrClient.value);
+        localStorage.setItem("Fitness Center ", fitnessCenter.value);
+        localStorage.setItem("Phone Number ", newPhoneNumber.value);
+*/

@@ -1,4 +1,5 @@
 // Vi har udarbejdet en klasse som hedder "userProfile", heri har vi tildeldt nogle forskellige variabler i constructoren.
+// Vi har valgt at lave et sepperart dokumnt til Klassen.
 
 /*class userProfile {
     constructor(name, mail, username, password, gender, age, mobilenumber, fitnesscenter, experience) {
@@ -16,9 +17,10 @@
 
 
 // Her laver vi en empty array, som skal bruges til at opbevare local storage i.
+// Vi laver også en var userList i global scope, så den kan kaldes flere steder
 
 var currentLogIn = [];
-var userList
+var userList;
 
 if(localStorage.getItem("user") == null) {
 
@@ -38,10 +40,13 @@ if(localStorage.getItem("user") == null) {
         "26", "21222324","Repeat", "Expert"));
 
 // Vi anvendder nu JSON.stringify - Dette betyder at vores userlist som er et array bliver lavet om til forskellige strings.
+
     var userListString = JSON.stringify(userList);
     localStorage.setItem("user", userListString);
 
-}else{
+}else
+
+    {
 
     // Vi laver en variable "loggedInID", hvorefter at vi bruger variablen til at hente vores "id" gemt i vores localStorage.
     // Vi anvdender JSON.parse til at konveterer vores data fra strings til objekter.
@@ -97,39 +102,5 @@ function getInfo() {
     document.getElementById("myProfileFitnesscenter").innerHTML = "Fitness Center: " + currentUser.fitnesscenter;
     document.getElementById("myProfileExperience").innerHTML = "Experience: " + currentUser.experience;
 }
-//window.onload = function (Profile) {
-
-   // document.getElementById("myProfile").innerHTML ="Name" + currentUser.name
-
-//}
-
-
-
-
-
-
-
-
- /*Logut funktion for at slette Current users værdier fra local storage.
- var logout = document.getElementById("logout");
- logout.onclick = function logout(){
-  = null;
- localStorage.setItem("userList", JSON.stringify(userList));
- window.location="index.html";
- }
-
- Placeholder og ID
- Kalder current user og den værdi vi ønsker.
-  <button onclick="Profile">Show profile</button>
-
-
-     function myProfile() {
-            window.onload=myProfile();
-            alert(" Alert inside Profile function ");
-
-
-
-            document.getElementById("myProfileID").innerHTML ="Name" + currentUser.name;
-        }
 
  */
