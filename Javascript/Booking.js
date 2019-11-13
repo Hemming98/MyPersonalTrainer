@@ -17,7 +17,7 @@ this.timeDateMonthInput = document.getElementById("timeDateMonth");
 this.timeForTrainingInput = document.getElementById("timeForTraining");
 this.personalTrainerOfTheDayInput = document.getElementById("personalTrainerOfTheDay");
 
-// vi laver en function som gemmer i localstorage ved hjælp af setItem
+// vi laver en function som gemmer i localstorage ved hjælp af setItem - Sara
 
 function saveBooking() {
 
