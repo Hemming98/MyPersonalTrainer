@@ -1,4 +1,3 @@
-
 // Her anvender vi window.onload som loader vores funktion når subsitet bliver loaded.
 /// Vi anvender derefter document.getElementById til at hente værdierne fra vores ID på htmlsiden, og derefter indsætter værdierne fra vores currentUser.
 window.onload = function myProfile() {
@@ -12,11 +11,9 @@ window.onload = function myProfile() {
         document.getElementById("myProfileFitnesscenter").innerHTML = "Fitness Center: " + currentUser.fitnesscenter;
         document.getElementById("myProfileExperience").innerHTML = "Experience: " + currentUser.experience;
 
-
+        // vi henter her bookingen som vi lavede under booking.js. Vi sætter samtidigt værdierne fra vores booking ind i vores paragraffer (profile.html) - Sara
         document.getElementById("bookingTrainingType").innerHTML = "Training type: " + localStorage.getItem("trainingType");
         document.getElementById("bookingDate").innerHTML = "Date: " + localStorage.getItem("date");
         document.getElementById("bookingTime").innerHTML = "Time: " + localStorage.getItem("time");
         document.getElementById("bookingTrainer").innerHTML = "Trainer: " + localStorage.getItem("trainer");
-    };
-
-
+};

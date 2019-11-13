@@ -90,7 +90,7 @@ function checkInformations() {
     }
 
     if (form_validation) {
-        alert("HAHAHAHAHAHA");
+
     }
 
     else {
