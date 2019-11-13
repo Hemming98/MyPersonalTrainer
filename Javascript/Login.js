@@ -1,4 +1,17 @@
 
+<!-- Adding some JavaScript for Password visibility -->
+
+function myPassword1() {
+    var x = document.getElementById("password");
+    if (x.type === "password") {
+        x.type = "text" ;
+    } else
+        x.type = "password";
+};
+
+
+
+
 // Her laver vi en empty array, som skal bruges til at opbevare local storage i.
 // Vi laver også en var userList i global scope, så den kan kaldes flere steder
 

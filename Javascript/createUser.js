@@ -123,7 +123,6 @@ function createUser() {
 
 
 
-
         // Her laver vi en en ny userArray som vi psuher til vores userlist.
         // Vi bruger derefter JSON.Stringify fordi alt der er gemt i local storage skal være strings, hvorefter at vores JSON.parse laver den om fra en string.
 

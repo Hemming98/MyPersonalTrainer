@@ -39,6 +39,64 @@ function deleteBooking () {
 
 }
 
+//Here we make sure that you have to fill out all the informations when choosing a module
+
+function checkInformations() {
+    var form_validation = true;
+
+
+    if (document.getElementById('trainingType').value == "00") {
+
+        document.getElementById("validateWorkout").innerHTML = "Please choose a workout from the menu <br/>"
+        form_validation = false;
+
+    }
+
+    else {
+        document.getElementById("validateWorkout").innerHTML = null;
+    }
+
+
+    if (document.getElementById('trainingType').value == "00") {
+
+        document.getElementById("validateTimeMonthAndYear").innerHTML = "Please choose a module (time and date) <br/>"
+        form_validation = false;
+
+    }
+    else {
+        document.getElementById("validateTimeMonthAndYear").innerHTML = null;
+    }
+
+    if (document.getElementById('trainingType').value == "00") {
+
+        document.getElementById("validateTime").innerHTML = "Please choose which lesson you want <br/>"
+        form_validation = false;
+
+    }
+    else {document.getElementById("validateTime").innerHTML = null;
+    }
+
+    if (document.getElementById('trainingType').value == "00") {
+
+        document.getElementById("validatePT").innerHTML = "Please choose a personal trainer <br/>"
+        form_validation = false;
+
+    }
+
+    else {document.getElementById("validatePT").innerHTML = null;
+
+    }
+
+    if (form_validation) {
+        alert("HAHAHAHAHAHA");
+    }
+
+    else {
+        return false;
+    }
+    return(form_validation);
+
+}
 
 
 

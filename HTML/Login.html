@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <title> My Personal Trainer</title>
 
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/style.css">
 
 </head>
 
@@ -24,19 +24,9 @@
         <input type="password" value="" id="password" placeholder="Enter password here">
         <br>
         </br>
+
         <!-- Add button to toggle visibility -->
         <input type= "checkbox" onclick="myPassword1()" >Show password
-
-        <!-- Adding some JavaScript for Password visibility -->
-        <script>
-            function myPassword1() {
-                var x = document.getElementById("password");
-                if (x.type === "password") {
-                    x.type = "text" ;
-                } else
-                    x.type = "password";
-            };
-        </script>
 
 
         </br>
@@ -49,8 +39,8 @@
 
         </br>
         <a href="createUser.html"> Har du ikke en bruger? Så opret dig her</a>
-        <script src="userProfileClass.js"></script>
-        <script src="Login.js"></script>
+        <script src="../Javascript/userProfileClass.js"></script>
+        <script src="../Javascript/Login.js"></script>
     </form>
 
 </div>
