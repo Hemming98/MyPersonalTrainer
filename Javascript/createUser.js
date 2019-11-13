@@ -13,6 +13,7 @@ var newUser = document.getElementById("newUser");
 var newPassword = document.getElementById("newPassword");
 var newPhoneNumber = document.getElementById("newPhoneNumber");
 var newAge = document.getElementById("newAge");
+var newGender = document.getElementById("newGender");
 var newName = document.getElementById("newName");
 var trainerOrClient = document.getElementById("trainerOrClient");
 var fitnessCenter = document.getElementById("fitnessCenter");
@@ -82,6 +83,15 @@ function createUser() {
         document.getElementById("validationPhoneNumber").innerHTML = null;
     }
 
+    if(newGender.value == "-Gender-") {
+
+        document.getElementById("validationGender").innerHTML = "Please choose gender <br/>"
+        form_valid = false;
+    }
+    else {
+        document.getElementById("validationGender").innerHTML = null;
+    }
+
 
     if(newName.value == null || newName.value == "") {
 
@@ -128,7 +138,7 @@ function createUser() {
         // Vi bruger derefter JSON.Stringify fordi alt der er gemt i local storage skal være strings, hvorefter at vores JSON.parse laver den om fra en string.
 
         var userArray = JSON.parse(localStorage.getItem("user"));
-        userArray.push(new userProfile(newName.value, newMail.value, newUser.value, newPassword.value, null, newAge.value, newPhoneNumber.value, fitnessCenter.value, null))
+        userArray.push(new userProfile(newName.value, newMail.value, newUser.value, newPassword.value, newGender.value, newAge.value, newPhoneNumber.value, fitnessCenter.value, null))
 
         localStorage.setItem("user", JSON.stringify(userArray));
         alert("new user has been created!");

@@ -11,7 +11,7 @@ window.onload = function myProfile() {
         document.getElementById("myProfileFitnesscenter").innerHTML = "Fitness Center: " + currentUser.fitnesscenter;
         document.getElementById("myProfileExperience").innerHTML = "Experience: " + currentUser.experience;
 
-        // vi henter her bookingen som vi lavede under booking.js. Vi sætter samtidigt værdierne fra vores booking ind i vores paragraffer (profile.html) - Sara
+
         document.getElementById("bookingTrainingType").innerHTML = "Training type: " + localStorage.getItem("trainingType");
         document.getElementById("bookingDate").innerHTML = "Date: " + localStorage.getItem("date");
         document.getElementById("bookingTime").innerHTML = "Time: " + localStorage.getItem("time");
