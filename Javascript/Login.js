@@ -35,9 +35,13 @@ if(localStorage.getItem("user") == null) {
     userList.push( new userProfile("Sara Sharef", "sara@live.dk", "sara", "sara123","female",
         "26", "21222324","Repeat", "Expert"));
 
+    userList.push( new trainer("Lars Larsen", "lars@g-mail.k", "larsen", "lars123","male",
+        "30", "21222324","Repeat", "admin"));
+
 // Vi anvendder nu JSON.stringify - Dette betyder at vores userlist som er et array bliver lavet om til forskellige strings.
 
     var userListString = JSON.stringify(userList);
+
     localStorage.setItem("user", userListString);
 
 }else
@@ -46,6 +50,7 @@ if(localStorage.getItem("user") == null) {
 
     // Vi laver en variable "loggedInID", hvorefter at vi bruger variablen til at hente vores "id" gemt i vores localStorage.
     // Vi anvdender JSON.parse til at konveterer vores data fra strings til objekter.
+
     var loggedInID = localStorage.getItem('id');
     userList = JSON.parse(localStorage.getItem("user"));
     var currentUser = userList[loggedInID];
@@ -72,16 +77,24 @@ function getInfo() {
     for (i = 0; i < userList.length; i++) {
         if (username == userList[i].username && password == userList[i].password) {
             alert(username + " is logged in");
+
             window.location = "oversigt.html";
+
             currentLogIn.push({currentUser});
+
             document.location.href = "oversigt.html";
+
             var IDString = JSON.stringify(currentLogIn);
+
             localStorage.setItem('id', i);
+
             localStorage.setItem("CurrentUser", IDString);
             return
         }
     }
     alert("Incorrect username or password");
+
+
 
 }
 

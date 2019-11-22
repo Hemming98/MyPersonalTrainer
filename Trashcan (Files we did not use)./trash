@@ -97,3 +97,17 @@ li {
         }
 
     </style>
+
+       for (i = 0; i < userList.length; i++) {
+            if (username == userList[i].username && password == userList[i].password) {
+                alert(username + " is logged in");
+                window.location = "oversigt.html";
+                currentLogIn.push({currentUser});
+                document.location.href = "oversigt.html";
+                var IDString = JSON.stringify(currentLogIn);
+                localStorage.setItem('id', i);
+                localStorage.setItem("CurrentUser", IDString);
+                return
+            }
+        }
+        alert("Incorrect username or password");
