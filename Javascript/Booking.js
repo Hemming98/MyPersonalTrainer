@@ -41,11 +41,16 @@ function deleteBooking () {
 
 }
 
+//Kristoffer
 //Here we make sure that you have to fill out all the informations when choosing a module
+//create a new funktion with multiple If-statements that check if the formula is correct filled out
+//create a variable "form_validation" and assign the boolean to "true" to check if we come trough our if-statements.
+
 
 function checkInformations() {
     var form_validation = true;
 
+//First we check if the client has chosen a workout-type.
 
     if (document.getElementById('trainingType').value == "00") {
 
@@ -58,6 +63,11 @@ function checkInformations() {
         document.getElementById("validateWorkout").innerHTML = null;
     }
 
+    //Kristoffer
+    //Secondly, we check if the client has chosen a time and date for the workout. It takes 2 if-statements.
+    /*To optimise this code, we would have to create time and module as "Data object" in JavaScript, but we use a string, because we have
+    predefined our training module. A future update of our program will include a time and module object:
+     https://www.w3schools.com/js/js_dates.asp*/
 
     if (document.getElementById('trainingType').value == "00") {
 
@@ -78,6 +88,9 @@ function checkInformations() {
     else {document.getElementById("validateTime").innerHTML = null;
     }
 
+    //Kristoffer
+    //Finally, we check if the client has chosen a personal trainer
+
     if (document.getElementById('trainingType').value == "00") {
 
         document.getElementById("validatePT").innerHTML = "Please choose a personal trainer <br/>"
@@ -88,6 +101,11 @@ function checkInformations() {
     else {document.getElementById("validatePT").innerHTML = null;
 
     }
+
+    //Kristoffer
+    //Trough the whole process we validate if the client "passes" the if-statement or not.
+    //If not form_validation = false, and then an message will be printet.
+    //Here we check the form_validation. Likely if the boolean still is true.
 
     if (form_validation) {
 
