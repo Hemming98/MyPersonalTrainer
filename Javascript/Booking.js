@@ -98,7 +98,7 @@ function checkInformations() {
 
     }
 
-    else {document.getElementById("validatePT").innerHTML = null;
+    else { document.getElementById("validatePT").innerHTML = null;
 
     }
 
@@ -109,10 +109,14 @@ function checkInformations() {
 
     if (form_validation) {
 
+        getValueFromList();
+
     }
 
     else {
+
         return false;
+
     }
     return(form_validation);
 
