@@ -16,13 +16,18 @@ function myPassword1() {
 // Vi laver også en var userList i global scope, så den kan kaldes flere steder
 
 var currentLogIn = [];
+
+
 var userList;
 
 if(localStorage.getItem("user") == null) {
 
 //Her laver vi nu en tom array, som vi kalder "Userlist", hvorfter vi laver 3 nye user profiles.
+    // Vi har også lavert et array som hedder trainerList, til trænerne.
 
     userList = [];
+
+    //var trainerList = [];//
 
 // Vi anvender derefter push funktionen til at få skubbet vores objekter op i vore tomme array.
 
@@ -36,7 +41,9 @@ if(localStorage.getItem("user") == null) {
         "26", "21222324","Repeat", "Expert"));
 
     userList.push( new trainer("Lars Larsen", "lars@g-mail.k", "larsen", "lars123","male",
-        "30", "21222324","Repeat", "admin"));
+        "30", "21222324","Repeat", "Upper body","true"));
+
+    //console.log(trainerList);
 
 // Vi anvendder nu JSON.stringify - Dette betyder at vores userlist som er et array bliver lavet om til forskellige strings.
 
@@ -52,12 +59,15 @@ if(localStorage.getItem("user") == null) {
     // Vi anvdender JSON.parse til at konveterer vores data fra strings til objekter.
 
     var loggedInID = localStorage.getItem('id');
+
     userList = JSON.parse(localStorage.getItem("user"));
+
     var currentUser = userList[loggedInID];
 
     // Her consolelogger vi localstorage så vi kan se oplysningerne på den bruger som er logget ind.
 
     console.log(currentUser);
+
     console.log(localStorage);
 }
 
@@ -68,11 +78,39 @@ function getInfo() {
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
 
-// Vi laver nu et for loop, som looper igennem passwords og usernames i vores array, hvorefter den alerter om password og username er korrekt.
+
+     // Her ville vi tilføje en EventListener, som gjorde at man kunne logge ind ved at trykke enter
+    // I stedet for at skulle trykke på vores "login" button, Koden kan desværre ikke fungere uden der er et tomt input felt på vores HTMl site (Login.Html).
+
+/* var input = document.getElementById("myInput");
+
+input.addEventListener("keyup", function (event) {
+
+    if (event.keyCode === 13) {
+
+        event.preventDefault("myBtn").click();
+    }
+});
+
+
+
+*/
+
+
+if (username == userList[3].username && password == userList[3].password) {
+
+    alert(username + " Trainer is logged in");
+
+    window.location = "trainer.html";
+
+
+}
+
+else {
+
+    // Vi laver nu et for loop, som looper igennem passwords og usernames i vores array, hvorefter den alerter om password og username er korrekt.
 // Yderemere har vil tilføjet window.location for at henvise brugeren til en ny side, hvis oplysningerne er korrekte.
 // Vi anvender nu JSON for at lave vores currentLogIn array om til en enkelt string, som så er vores enkelte bruger som er logget ind.
-
-    // Hvad opnår koden?
 
     for (i = 0; i < userList.length; i++) {
         if (username == userList[i].username && password == userList[i].password) {
@@ -80,7 +118,7 @@ function getInfo() {
 
             window.location = "oversigt.html";
 
-            currentLogIn.push({currentUser});
+            currentLogIn.push(currentUser);
 
             document.location.href = "oversigt.html";
 
@@ -93,8 +131,7 @@ function getInfo() {
         }
     }
     alert("Incorrect username or password");
-
-
+}
 
 }
 
