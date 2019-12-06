@@ -81,8 +81,8 @@ function getInfo() {
 
      // Her ville vi tilføje en EventListener, som gjorde at man kunne logge ind ved at trykke enter
     // I stedet for at skulle trykke på vores "login" button, Koden kan desværre ikke fungere uden der er et tomt input felt på vores HTMl site (Login.Html).
-
-/* var input = document.getElementById("myInput");
+/*
+ var input = document.getElementById("myInput");
 
 input.addEventListener("keyup", function (event) {
 
@@ -92,18 +92,33 @@ input.addEventListener("keyup", function (event) {
     }
 });
 
-
-
 */
+    // var input1 = document.getElementById("username");
+
+    var input2 = document.getElementById("password");
+   /* input1.addEventListener("keyup", function(event) {
+
+        if (event.key === 13) {
+            document.getElementById("enter").click();
+        }
+*/
+        input2.addEventListener("submit", function(event) {
+
+            if (event.key === 13) {
+
+                document.getElementById("enter").click();
+            }
+        });
 
 
-if (username == userList[3].username && password == userList[3].password) {
+
+
+
+            if (username == userList[3].username && password == userList[3].password) {
 
     alert(username + " Trainer is logged in");
 
     window.location = "trainer.html";
-
-
 }
 
 else {

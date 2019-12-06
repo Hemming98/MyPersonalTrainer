@@ -148,6 +148,8 @@ ellers sættes værdien i vores paragraf tags til null og fejlmeddelesen udskriv
         // Vi bruger derefter JSON.Stringify fordi alt der er gemt i local storage skal være strings, hvorefter at vores JSON.parse laver den om fra en string.
 
         var userArray = JSON.parse(localStorage.getItem("user"));
+
+
         userArray.push(new userProfile(newName.value, newMail.value, newUser.value, newPassword.value, newGender.value, newAge.value, newPhoneNumber.value, fitnessCenter.value, null));
 
         localStorage.setItem("user", JSON.stringify(userArray));
