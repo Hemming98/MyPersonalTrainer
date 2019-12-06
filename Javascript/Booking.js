@@ -29,7 +29,6 @@ function saveBooking() {
     console.log(localStorage);
 }
 
-
 // sletter booking som er gemt i local storage - Sara
 
 function deleteBooking () {
@@ -52,6 +51,8 @@ function checkInformations() {
 
 //First we check if the client has chosen a workout-type.
 
+
+
     if (document.getElementById('trainingType').value == "00") {
 
         document.getElementById("validateWorkout").innerHTML = "Please choose a workout from the menu <br/>"
@@ -69,7 +70,7 @@ function checkInformations() {
     predefined our training module. A future update of our program will include a time and module object:
      https://www.w3schools.com/js/js_dates.asp*/
 
-    if (document.getElementById('trainingType').value == "00") {
+    if (document.getElementById('timeDateMonth').value == "00") {
 
         document.getElementById("validateTimeMonthAndYear").innerHTML = "Please choose a module (time and date) <br/>"
         form_validation = false;
@@ -79,7 +80,7 @@ function checkInformations() {
         document.getElementById("validateTimeMonthAndYear").innerHTML = null;
     }
 
-    if (document.getElementById('trainingType').value == "00") {
+    if (document.getElementById('timeForTraining').value == "00") {
 
         document.getElementById("validateTime").innerHTML = "Please choose which lesson you want <br/>"
         form_validation = false;
@@ -91,7 +92,7 @@ function checkInformations() {
     //Kristoffer
     //Finally, we check if the client has chosen a personal trainer
 
-    if (document.getElementById('trainingType').value == "00") {
+    if (document.getElementById('personalTrainerOfTheDay').value == "00") {
 
         document.getElementById("validatePT").innerHTML = "Please choose a personal trainer <br/>"
         form_validation = false;
@@ -111,16 +112,42 @@ function checkInformations() {
 
         getValueFromList();
 
-    }
-
-    else {
+    } else {
 
         return false;
 
     }
+
     return(form_validation);
 
 }
+
+/*
+class bookingModules {
+    constructor(trainingType, dateForTraining, timeForTraining, trainer, client) {
+        this.trainingType = trainingType;
+        this.dateForTraining = dateForTraining;
+        this.timeForTraining = timeForTraining;
+        this.trainer = trainer;
+        this.currentUser = currentUser;
+    }
+}
+
+var moduleArray = [];
+
+function createModuleObj () {
+
+    var moduleObj = new bookingModules(
+        docu
+    )
+
+    moduleArray.push(moduleObj);
+
+
+
+}
+
+ */
 
 
 
