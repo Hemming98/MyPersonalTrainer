@@ -17,6 +17,8 @@ class userProfile {
 
 // Her har vi lavet en sub-class som er nedavlet af vores superclass "Userprofile"
 // Hensigten med denne sub-class er at kunne logge ind som administrativ bruger.
+
+
 class trainer {
     constructor(name, mail, username, password, gender, age, mobilenumber, fitnesscenter, admin) {
         this.name = name;
@@ -27,7 +29,7 @@ class trainer {
         this.age = age;
         this.mobilenumber = mobilenumber;
         this.fitnesscenter = fitnesscenter;
-        this.admin = admin;
+        this.admin = true;
     }
 }
 
