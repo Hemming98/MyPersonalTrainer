@@ -1,4 +1,4 @@
-/*class bookingconfirmation {
+class bookingconfirmation {
     constructor(date, time, fitnessCenter, client, trainer, trainingType)   {
 
         this.date = date;
@@ -23,4 +23,5 @@ bookinglist.push( new bookingconfirmation("34/10/2019", "17:00",
 bookinglist.push( new bookingconfirmation("09/12/2019", "16:00",
     "Urban Gym", "Oliver", "Sara", "Cardio"));
 
-console.log(bookinglist)*/
+console.log(bookinglist)
+
