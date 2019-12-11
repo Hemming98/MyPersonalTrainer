@@ -1,6 +1,5 @@
-
-//Function which alert the selected value from the "Dropdown list" and combines it with some relavant data from the userProfile?
-
+//KK
+//Dette er en funktion, der laver en alert ud fra de valgte værdier i "dropdown-listen" fra booking.html
 function getValueFromList() {
     var trainingType = document.getElementById("trainingType").selectedOptions[0].text;
     var dateForTheWorkout = document.getElementById("timeDateMonth").selectedOptions[0].text;
@@ -9,7 +8,7 @@ function getValueFromList() {
 
     alert("Hello" + " " + currentUser.name + " " + trainingType + ", " + dateForTheWorkout + "," + timeOfTheWorkout +", " + trainingTime1);
 }
-
+//KK
 // vi henter værdierne fra vores id tags som ligger i booking.js - Sara
 
 this.trainingTypeInput = document.getElementById("trainingType");
@@ -28,7 +27,7 @@ function saveBooking() {
 
     console.log(localStorage);
 }
-
+//KK
 // sletter booking som er gemt i local storage - Sara
 
 function deleteBooking () {
@@ -39,18 +38,13 @@ function deleteBooking () {
     alert("Booking has been deleted!")
 
 }
-
-//Kristoffer
-//Here we make sure that you have to fill out all the informations when choosing a module
-//create a new funktion with multiple If-statements that check if the formula is correct filled out
-//create a variable "form_validation" and assign the boolean to "true" to check if we come trough our if-statements.
-
+//KK
+//Her sikrer vi os, at alle informationer er udfyldt, når man vælger et træningsmodul.
+//Der bliver altså lavet en funktion "checkinformations()" med flere if-statements, der eftertjekker at formularen er udfyldt.
+//Dertil laves en form_validation med tilhørende boolean, der giver true eller false alt efter, om vores if-statement er korrekt.
 
 function checkInformations() {
     var form_validation = true;
-
-//First we check if the client has chosen a workout-type.
-
 
 
     if (document.getElementById('trainingType').value == "00") {
@@ -63,12 +57,6 @@ function checkInformations() {
     else {
         document.getElementById("validateWorkout").innerHTML = null;
     }
-
-    //Kristoffer
-    //Secondly, we check if the client has chosen a time and date for the workout. It takes 2 if-statements.
-    /*To optimise this code, we would have to create time and module as "Data object" in JavaScript, but we use a string, because we have
-    predefined our training module. A future update of our program will include a time and module object:
-     https://www.w3schools.com/js/js_dates.asp*/
 
     if (document.getElementById('timeDateMonth').value == "00") {
 
@@ -89,9 +77,6 @@ function checkInformations() {
     else {document.getElementById("validateTime").innerHTML = null;
     }
 
-    //Kristoffer
-    //Finally, we check if the client has chosen a personal trainer
-
     if (document.getElementById('personalTrainerOfTheDay').value == "00") {
 
         document.getElementById("validatePT").innerHTML = "Please choose a personal trainer <br/>"
@@ -103,10 +88,10 @@ function checkInformations() {
 
     }
 
-    //Kristoffer
-    //Trough the whole process we validate if the client "passes" the if-statement or not.
-    //If not form_validation = false, and then an message will be printet.
-    //Here we check the form_validation. Likely if the boolean still is true.
+    //KK
+    //Som nævnt tjekker vi hele processen efter med en boolean, om if-statementet er korrekt eller falsk.
+    //Til sidst laves en afsluttende form_validation. Hvis den er true, så kalder den "getValueFromList()" og hvis den er falsk printes fejlmeddelelserne.
+
 
     if (form_validation) {
 
@@ -121,6 +106,8 @@ function checkInformations() {
     return(form_validation);
 
 }
+//KK
+//Nedenfor ses noget udkommenteret kode, som var et bud på at få implementeret endnu en klasse.
 
 /*
 class bookingModules {
