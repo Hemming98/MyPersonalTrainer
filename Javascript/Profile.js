@@ -11,6 +11,7 @@ window.onload = function myProfile() {
         document.getElementById("myProfileFitnesscenter").innerHTML = "Fitness Center: " + currentUser.fitnesscenter;
         document.getElementById("myProfileExperience").innerHTML = "Experience: " + currentUser.experience;
 
+// Her anvender vi samme metode, dog med henblik på træningsmodulet.
 
         document.getElementById("bookingTrainingType").innerHTML = "Training type: " + localStorage.getItem("trainingType");
         document.getElementById("bookingDate").innerHTML = "Date: " + localStorage.getItem("date");

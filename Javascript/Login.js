@@ -1,5 +1,5 @@
 
-<!-- Adding some JavaScript for Password visibility -->
+//Her har vi lavet en funktion, som kan henholdsvis Hide/Show passwoed.
 
 function myPassword1() {
     var x = document.getElementById("password");
@@ -9,7 +9,12 @@ function myPassword1() {
         x.type = "password";
 };
 
+// Her har vi lavet en funktion som slette CurrentUser fra localStorage, når man logger ud.
 
+function logout() {
+    localStorage.removeItem("CurrentUser");
+    alert("User has logged out");
+}
 
 
 // Her laver vi en empty array, som skal bruges til at opbevare local storage i.
@@ -17,19 +22,26 @@ function myPassword1() {
 
 var currentLogIn = [];
 
+//Her laver vi nu en tom array, som vi kalder "Userlist", hvorfter vi laver 3 nye user profiles og en trainer profile.
 
-var userList;
+var userList = [];
+
+console.log(userList);
+
+// Vi har også lavert et array som hedder trainerList, til trænerne - det er dog ikke blevet implementeret endnu.
+
+var trainerList = [];
+
+console.log(trainerList);
+
+//Her har vi udarbejdet et if statement, som som er true hvis vores "user" key i localStorage er tom.
 
 if(localStorage.getItem("user") == null) {
 
-//Her laver vi nu en tom array, som vi kalder "Userlist", hvorfter vi laver 3 nye user profiles.
-    // Vi har også lavert et array som hedder trainerList, til trænerne.
 
-    userList = [];
 
-    //var trainerList = [];//
 
-// Vi anvender derefter push funktionen til at få skubbet vores objekter op i vore tomme array.
+// Vi anvender derefter push funktionen til at få pushed vores objekter i vores tomme userList array.
 
     userList.push( new userProfile("Oliver Dahl Christiansen", "oliverdc@live.dk", "oliver",
         "oliver123","male","19","21225007","Urban Gym", "None"));
@@ -43,7 +55,7 @@ if(localStorage.getItem("user") == null) {
     userList.push( new trainer("Lars Larsen", "lars@g-mail.k", "larsen", "lars123","male",
         "30", "21222324","Repeat", "Upper body","true"));
 
-    //console.log(trainerList);
+
 
 // Vi anvendder nu JSON.stringify - Dette betyder at vores userlist som er et array bliver lavet om til forskellige strings.
 
@@ -57,6 +69,7 @@ if(localStorage.getItem("user") == null) {
 
     // Vi laver en variable "loggedInID", hvorefter at vi bruger variablen til at hente vores "id" gemt i vores localStorage.
     // Vi anvdender JSON.parse til at konveterer vores data fra strings til objekter.
+        // "id" er hvilket nummer objektet har i vores localStorage.
 
     var loggedInID = localStorage.getItem('id');
 
@@ -64,7 +77,7 @@ if(localStorage.getItem("user") == null) {
 
     var currentUser = userList[loggedInID];
 
-    // Her consolelogger vi localstorage så vi kan se oplysningerne på den bruger som er logget ind.
+    // Her consolelogger vi localstorage så vi kan se oplysningerne på den bruger som er logget ind, samt resten af brugerne i systemet.
 
     console.log(currentUser);
 
@@ -92,16 +105,16 @@ input.addEventListener("keyup", function (event) {
     }
 });
 
-*/
+// Dette var forsøg nummer 2. på at implementere EventListener
     // var input1 = document.getElementById("username");
 
     var input2 = document.getElementById("password");
-   /* input1.addEventListener("keyup", function(event) {
+    input1.addEventListener("keyup", function(event) {
 
         if (event.key === 13) {
             document.getElementById("enter").click();
         }
-*/
+
         input2.addEventListener("submit", function(event) {
 
             if (event.key === 13) {
@@ -109,12 +122,12 @@ input.addEventListener("keyup", function (event) {
                 document.getElementById("enter").click();
             }
         });
+*/
 
+// Her i den første del af vores if statement, tjekker vi kun for brugere nummer 3. i vores userList array.
+    // Årsagen til dette er fordi, at det er den eneste administrative bruger i systemet på det nuværende tidspunkt - udbybes i rapporten.
 
-
-
-
-            if (username == userList[3].username && password == userList[3].password) {
+if (username == userList[3].username && password == userList[3].password) {
 
     alert(username + " Trainer is logged in");
 
@@ -134,8 +147,6 @@ else {
             window.location = "oversigt.html";
 
             currentLogIn.push(currentUser);
-
-            document.location.href = "oversigt.html";
 
             var IDString = JSON.stringify(currentLogIn);
 
