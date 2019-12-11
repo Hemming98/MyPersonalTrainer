@@ -154,7 +154,6 @@ ellers sættes værdien i vores paragraf tags til null og fejlmeddelesen udskriv
 
         localStorage.setItem("user", JSON.stringify(userArray));
         alert("new user has been created!");
-        console.log(localStorage);
 
     }
     else {

@@ -26,13 +26,11 @@ var currentLogIn = [];
 
 var userList = [];
 
-console.log(userList);
 
 // Vi har også lavert et array som hedder trainerList, til trænerne - det er dog ikke blevet implementeret endnu.
 
 var trainerList = [];
 
-console.log(trainerList);
 
 //Her har vi udarbejdet et if statement, som som er true hvis vores "user" key i localStorage er tom.
 
@@ -79,9 +77,6 @@ if(localStorage.getItem("user") == null) {
 
     // Her consolelogger vi localstorage så vi kan se oplysningerne på den bruger som er logget ind, samt resten af brugerne i systemet.
 
-    console.log(currentUser);
-
-    console.log(localStorage);
 }
 
 

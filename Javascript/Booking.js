@@ -25,7 +25,6 @@ function saveBooking() {
     localStorage.setItem("time", timeForTrainingInput.value);
     localStorage.setItem("trainer", personalTrainerOfTheDayInput.value);
 
-    console.log(localStorage);
 }
 //KK
 // sletter booking som er gemt i local storage - Sara
