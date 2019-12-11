@@ -124,7 +124,7 @@ function checkInformations() {
 
 /*
 class bookingModules {
-    constructor(trainingType, dateForTraining, timeForTraining, trainer, client) {
+    constructor(trainingType, dateForTraining, timeForTraining, trainer, currentUser) {
         this.trainingType = trainingType;
         this.dateForTraining = dateForTraining;
         this.timeForTraining = timeForTraining;
@@ -147,8 +147,10 @@ function createModuleObj () {
 
 }
 
- */
+*/
 
 
+
+//Test
 
 
